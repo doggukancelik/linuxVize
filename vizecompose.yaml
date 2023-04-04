@@ -6,10 +6,11 @@ services:
     #image: mysql:8.0.27
     environment:
            MYSQL_ROOT_PASSWORD: 030119030 
-    ...
-  wordpress:
+    
+  nginx:
     image: wordpress:latest
     ports:
       - 80:80
     restart: always
     ...
+
