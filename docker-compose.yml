@@ -43,6 +43,10 @@ services:
       - ./certbot/conf:/etc/letsencrypt
       - ./certbot/www:/var/www/certbot
 
-volumes:
-  db_data:
-  drupal_data:
+nginx:
+    images : nginx:latest
+    ports:
+        -'80:80'
+    volumes:
+        -./nginx
+        -/nginx
